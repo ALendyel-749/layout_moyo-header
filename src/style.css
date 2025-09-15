@@ -1,3 +1,72 @@
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  background-color: grey;
+}
+
+:root {
+  --header-height: 60px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.header {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height);
+  max-width: 1200px;
+  min-width: 1024px;
+}
+
+.nav_list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.nav_item a {
+  font-family: Roboto, sans-serif;
+  padding: 5px 0;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+header nav ul li {
+  margin-right: 20px;
+}
+
+.logo {
+  height: 41px;
+  width: 40px;
+  margin-left: 50px;
+  align-items: center;
+}
+
+.nav_item.apple a {
+  color: #00acdc;
+}
+
+header nav ul li.nav_item.apple::after {
+  content: '';
+  display: block;
+  width: 37px;
+  height: 4px;
+  background: #00acdc;
+  border-radius: 8px;
+  position: relative;
+  top: 18px;
+}
+
+header nav ul li:hover {
+  text-decoration: line-through;
+}
+
+header nav ul li:last-child {
+  margin-right: 50px;
 }
