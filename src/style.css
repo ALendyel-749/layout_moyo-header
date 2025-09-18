@@ -1,88 +1,90 @@
-html {
+/* Reset browser defaults */
+html,
+body {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  background-color: grey;
-  margin: 0;
-  padding: 0;
-}
-
+/* Root variables */
 :root {
   --color-hover: #00acdc;
   --nav-height: 60px;
 }
 
+/* Body */
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  background-color: grey;
+}
+
+/* Header */
 .header {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  margin: 0;
-  padding: 0;
-  height: var(--nav-height);
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-style: normal;
+  padding: 0 50px;
 }
 
+/* Logo */
 .logo__img {
   display: block;
   height: 40px;
   width: auto;
-  margin-left: 50px;
 }
 
-.nav_list {
+/* Navigation list */
+.nav__list {
   display: flex;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.nav_item {
+/* Navigation items */
+.nav__item:not(:last-child) {
   margin-right: 20px;
 }
 
-.nav_item:last-child {
-  margin-right: 0;
-}
-
-.apple {
-  color: var(--color-hover);
-}
-
-.nav_link {
-  display: block;
-  text-align: center;
-  line-height: var(--nav-height);
+/* Links */
+.nav__link {
+  display: flex;
+  align-items: center;
+  height: var(--nav-height);
   font-size: 12px;
   text-transform: uppercase;
   color: black;
   text-decoration: none;
-  padding: 0;
-}
-
-.nav_link:hover {
-  color: var(--color-hover);
-}
-
-.is-active {
-  color: var(--color-hover);
+  text-align: center;
   position: relative;
 }
 
-.is-active::after {
+/* Hover effect */
+.nav__link:hover {
+  color: var(--color-hover);
+}
+
+/* Active link */
+.nav__link.is-active {
+  color: var(--color-hover);
+}
+
+.nav__link.is-active::after {
   content: '';
-  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 4px;
   background-color: var(--color-hover);
   border-radius: 8px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }
 
+/* Optional: container for right margin (if needed) */
 .nav {
-  margin-right: 50px;
+  margin-right: 100px;
 }
