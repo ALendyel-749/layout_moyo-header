@@ -1,15 +1,11 @@
-
-* {
-  margin: 0;
-  padding: 0;
+html {
   box-sizing: border-box;
 }
 
 body {
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-style: normal;
   background-color: grey;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
@@ -23,12 +19,18 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: white;
+  margin: 0;
+  padding: 0;
+  height: var(--nav-height);
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
-.logo img {
+.logo__img {
   display: block;
   height: 40px;
-  width: 40px;
+  width: auto;
   margin-left: 50px;
 }
 
